@@ -1,4 +1,4 @@
-package main
+package lib
 
 import (
 	"errors"
@@ -6,7 +6,6 @@ import (
 	"log"
 	"strings"
 
-	"github.com/ArtalkJS/Artransfer-CLI/lib"
 	"gorm.io/driver/mysql"
 	"gorm.io/driver/postgres"
 	"gorm.io/driver/sqlite"
@@ -15,7 +14,7 @@ import (
 	"gorm.io/gorm/schema"
 )
 
-func OpenDB(ctx *lib.Context) (*gorm.DB, error) {
+func OpenDB(ctx *Context) (*gorm.DB, error) {
 	gormConfig := &gorm.Config{
 		NamingStrategy: schema.NamingStrategy{
 			TablePrefix:   ctx.DBConf.TablePrefix,

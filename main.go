@@ -53,7 +53,7 @@ func main() {
 
 	PrintDBConf(ctx)
 
-	if db, err := OpenDB(ctx); err == nil {
+	if db, err := lib.OpenDB(ctx); err == nil {
 		ctx.DB = db
 	} else {
 		log.Fatal("数据库连接失败 ", err)
