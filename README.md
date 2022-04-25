@@ -37,7 +37,7 @@ Run "artransfer <command> --help" for more information on a command.
 
 ```sh
 ./artransfer typecho \
-    --db="mysql"
+    --db="mysql" \
     --host="localhost" \
     --port="3306" \
     --user="root" \
